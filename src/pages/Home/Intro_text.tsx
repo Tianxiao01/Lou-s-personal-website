@@ -1,7 +1,7 @@
 import Bottom from "./Bottom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import img1 from "../../assets/tmp_img1.jpg";
+import img1 from "../../assets/Louworld_1.png";
 import img2 from "../../assets/tmp_img2.jpg";
 
 interface Props {

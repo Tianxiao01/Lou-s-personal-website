@@ -6,7 +6,7 @@ import "./Home.css";
 import Top from "./Top";
 
 const subpages = [
-  { name: "Long-Term Rental", path: "/GOOD-LAND-website-", height_fadeaway: -90 },
+  { name: "Long-Term Rental", path: "/", height_fadeaway: -90 },
   { name: "Long-Term Rental", path: "/LongTerm", height_fadeaway: 10 },
   { name: "Short-Term Rental", path: "/ShortTerm", height_fadeaway: 110 },
   { name: "Upcoming Products", path: "/Future", height_fadeaway: 210 },
@@ -19,28 +19,28 @@ const Home = () => {
 
       <IntroText
         layout="intro_layout1"
-        content={["GOOD LAND", "HOME AND ESSENTIALS LTD"]}
+        content={["WELCOME TO", "TIANXIAO'S WORLD"]}
         path={subpages[0].path}
         img="img1"
         height_fadeaway={subpages[0].height_fadeaway}
       />
       <IntroText
         layout="intro_layout2"
-        content={["LONG-TERM", "HIGH QUALITY RENTAL"]}
+        content={["PROJECTS", "DRIVEN BY PASSION"]}
         path={subpages[1].path}
         img="img2"
         height_fadeaway={subpages[1].height_fadeaway}
       />
       <IntroText
         layout="intro_layout3"
-        content={["SHORT-TERM", "ECONOMICAL RENTAL"]}
+        content={["EXPERIENCE", "SHAPING THE FUTURE"]}
         path={subpages[2].path}
         img="img1"
         height_fadeaway={subpages[2].height_fadeaway}
       />
       <IntroText
         layout="intro_layout4"
-        content={["UPCOMING", "FANCINATING PROJECT"]}
+        content={["Ongoing", "FANCINATING PROJECT"]}
         path={subpages[3].path}
         img="img2"
         height_fadeaway={subpages[3].height_fadeaway}

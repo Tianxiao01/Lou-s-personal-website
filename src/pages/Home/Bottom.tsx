@@ -28,15 +28,15 @@ const Bottom = () => {
 
   return <div className="Bottom">
         <div className="Additional_info1">Contact: <br/>
-        phone: (+1) 1234567890<br/>
-        email: 1234567890@example.com
+        phone: (+1) 2369912162<br/>
+        email: TianxiaoLou@outlook.com
         </div>
         <div className="Additional_info2" style={{right: width<height ? "0px":undefined,
                                                 left: width<height ? "10vw":undefined,
                                                 top: width<height ? "17vh":undefined}}>
-        Address: <br/>
-        Main: 123 AVE example, province, A1A B2B<br/>
-        Branch: 123 AVE example, province, A1A B2B
+        Wherer am I currently: <br/>
+        Country: Canada <br/>
+        Location: University of Waterloo, 200 Universit Ave W, N2J, 4B6
         </div>
        </div>;
 };
