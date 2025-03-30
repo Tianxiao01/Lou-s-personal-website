@@ -2,7 +2,17 @@ import Bottom from "./Bottom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import img1 from "../../assets/Louworld_1.png";
-import img2 from "../../assets/tmp_img2.jpg";
+import img2 from "../../assets/Lou's Line.png";
+import img4 from "../../assets/Lou's Line.png";
+import img3 from "../../assets/Lou's Line.png";
+
+
+const images: { [key: string]: string } = {
+  img1,
+  img2,
+  img3,
+  img4,
+};
 
 interface Props {
   layout: string;
@@ -67,7 +77,7 @@ const IntroText = ({ layout, content, path, height_fadeaway, img }: Props) => {
     <>
       <div style={{ position: "relative" }}>
         <img
-          src={img === "img1" ? img1 : img === "img2" ? img2 : img1}
+          src={images[img]}    //
           alt="img_1"
           className={
             number_of_layout % 2 === 0 ? "introBackground2" : "introBackground1"

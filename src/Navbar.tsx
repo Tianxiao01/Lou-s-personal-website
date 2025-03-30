@@ -27,9 +27,9 @@ const useWindowSize = () => {
 };
 
 const subpages = [
-  { name: "My Projects", path: "/LongTerm" },
-  { name: "My Experience", path: "/ShortTerm" },
-  { name: "Ongoing projects ", path: "/Future" },
+  { name: "My Projects", path: "/Projects" },
+  { name: "My Experience", path: "/Experience" },
+  { name: "Ongoing projects ", path: "/Ongoing" },
 ];
 
 
