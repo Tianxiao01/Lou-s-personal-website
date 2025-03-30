@@ -2,9 +2,9 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 //importing subpages
 import Home from "./pages/Home/Home";
-import LongTerm from "./pages/LongTerm/LongTerm";
+import LongTerm from "./pages/Projects/LongTerm";
 import Future from "./pages/Future/Future";
-import ShortTerm from "./pages/ShortTerm/ShortTerm";
+import ShortTerm from "./pages/Experience/ShortTerm";
 //css
 import "./App.css";
 //React Router

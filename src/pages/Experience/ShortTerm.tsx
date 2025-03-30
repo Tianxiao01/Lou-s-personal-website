@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from "../LongTerm/Card";
+import Card from "../Projects/Card";
 import cardListing1 from '../../assets/cardPlaceHolder2.jpg';
 import cardListing2 from '../../assets/cardPlaceHolder3.jpeg'
 
