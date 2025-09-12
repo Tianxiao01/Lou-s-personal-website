@@ -1,0 +1,354 @@
+/* Future Page Styles */
+.future-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: calc(12vh + 2rem);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+.future-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.future-header h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.future-header p {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.future-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.future-content section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.future-content h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.future-content h3 {
+  color: #4a90e2;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.future-content p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Career Goals */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.goal-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+}
+
+.goal-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.goal-card h3 {
+  color: #50c878;
+  margin-bottom: 1rem;
+}
+
+.goal-card p {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #4a90e2, #50c878);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: #4a90e2;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.timeline-date {
+  color: #4a90e2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: rgba(74, 144, 226, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: inline-block;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+.timeline-content h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+  color: #e0e0e0;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.timeline-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Long-term Vision */
+.vision-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.vision-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-3px);
+}
+
+.vision-card h3 {
+  color: #50c878;
+  margin-bottom: 1rem;
+}
+
+.vision-card p {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Skills Development */
+.skills-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.skill-category {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-category h3 {
+  color: #4a90e2;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skill-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-item span {
+  color: #e0e0e0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4a90e2, #50c878);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Personal Development */
+.personal-goals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.personal-goal {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.personal-goal:hover {
+  transform: translateY(-5px);
+}
+
+.personal-goal .goal-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.personal-goal h3 {
+  color: #50c878;
+  margin-bottom: 1rem;
+}
+
+.personal-goal p {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .future-container {
+    padding: 1rem;
+    padding-top: calc(12vh + 1rem);
+  }
+  
+  .future-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .future-header p {
+    font-size: 1.1rem;
+  }
+  
+  .future-content h2 {
+    font-size: 2rem;
+  }
+  
+  .future-content section {
+    padding: 1.5rem;
+  }
+  
+  .goals-grid,
+  .vision-content,
+  .personal-goals {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-roadmap {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item::before {
+    left: -1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .future-header h1 {
+    font-size: 2rem;
+  }
+  
+  .future-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .timeline-date {
+    font-size: 1.2rem;
+  }
+  
+  .goal-card,
+  .vision-card,
+  .personal-goal {
+    padding: 1.5rem;
+  }
+  
+  .skill-category {
+    padding: 1.5rem;
+  }
+}

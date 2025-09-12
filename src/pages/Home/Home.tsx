@@ -1,50 +1,65 @@
-import IntroText from "./Intro_text";
 import Logo from "./Logo";
 import Bottom from "./Bottom";
+import PersonalInfo from "./PersonalInfo";
+import BackgroundSlideshow from "./BackgroundSlideshow";
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import Top from "./Top";
 
-const subpages = [
-  { name: "Home", path: "/", height_fadeaway: -90 },
-  { name: "Projects", path: "/Projects", height_fadeaway: 10 },
-  { name: "Experience", path: "/Experience", height_fadeaway: 110 },
-  { name: "Upcoming Projects", path: "/Ongoing", height_fadeaway: 210 },
-];
-
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
+      <BackgroundSlideshow />
       <Top />
 
-      <IntroText
-        layout="intro_layout1"
-        content={["WELCOME TO", "TIANXIAO'S WORLD"]}
-        path={subpages[0].path}
-        img="img1"
-        height_fadeaway={subpages[0].height_fadeaway}
-      />
-      <IntroText
-        layout="intro_layout2"
-        content={["PROJECTS", "DRIVEN BY PASSION"]}
-        path={subpages[1].path}
-        img="img2"
-        height_fadeaway={subpages[1].height_fadeaway}
-      />
-      <IntroText
-        layout="intro_layout3"
-        content={["EXPERIENCE", "SHAPING THE FUTURE"]}
-        path={subpages[2].path}
-        img="img1"
-        height_fadeaway={subpages[2].height_fadeaway}
-      />
-      <IntroText
-        layout="intro_layout4"
-        content={["Ongoing", "FANCINATING PROJECT"]}
-        path={subpages[3].path}
-        img="img2"
-        height_fadeaway={subpages[3].height_fadeaway}
-      />
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">TIANXIAO LOU</h1>
+          <p className="hero-subtitle">Computer Engineering Student & Developer</p>
+          <p className="hero-description">
+            Passionate about hardware engineering, game development, and creating innovative solutions
+          </p>
+        </div>
+      </section>
+
+      {/* Personal Information Section */}
+      <PersonalInfo />
+      
+      {/* Navigation Cards */}
+      <section className="navigation-cards">
+        <div className="nav-card projects-card">
+          <div className="nav-card-content">
+            <h2>PROJECTS</h2>
+            <p>DRIVEN BY ENTHUSIASM</p>
+            <Link to="/Projects" className="nav-link">
+              Explore My Work →
+            </Link>
+          </div>
+        </div>
+        
+        <div className="nav-card experience-card">
+          <div className="nav-card-content">
+            <h2>EXPERIENCE</h2>
+            <p>SHAPING THE FUTURE</p>
+            <Link to="/Experience" className="nav-link">
+              View Experience →
+            </Link>
+          </div>
+        </div>
+        
+        <div className="nav-card future-card">
+          <div className="nav-card-content">
+            <h2>FUTURE PLANS</h2>
+            <p>BUILDING TOMORROW</p>
+            <Link to="/Ongoing" className="nav-link">
+              See Vision →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Bottom />
     </div>
   );

@@ -1,13 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import Navbar from "./Navbar";
-//importing subpages
 import Home from "./pages/Home/Home";
 import LongTerm from "./pages/Projects/LongTerm";
 import Future from "./pages/Future/Future";
 import ShortTerm from "./pages/Experience/ShortTerm";
-//css
 import "./App.css";
-//React Router
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {

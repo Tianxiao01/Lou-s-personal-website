@@ -38,7 +38,7 @@
   width: 100vw;
   height: auto;
   font-family: "Courier New", monospace;
-  font-size: 3.1vw;
+  font-size: clamp(1.5rem, 3.1vw, 4rem);
   transform: scaleX(1.2);
   text-align: left;
   transition: transform 0.3s ease;
@@ -47,40 +47,45 @@
 .intro_layout2 {
   position: absolute;
   top: 135vh;
-  left: 15vw;
-  width: 100vw;   
+  right: 5vw;
+  left: auto;
+  width: 40vw;   
   height: auto;
   font-family: "Courier New", monospace;
-  font-size: 3.1vw;
-  transform: scaleX(1.2);
-  text-align: left;
+  font-size: clamp(1.2rem, 2.5vw, 3rem);
+  transform: scaleX(1.1);
+  text-align: right;
   transition: transform 0.3s ease;
+  z-index: 10;
 }
 
 .intro_layout3 {
   position: absolute;
   top: 235vh;
-  left: 45vw;
-  width: 100vw;
+  left: 5vw;
+  width: 40vw;
   height: auto;
   font-family: "Courier New", monospace;
-  font-size: 3.1vw;
-  transform: scaleX(1.2);
+  font-size: clamp(1.2rem, 2.5vw, 3rem);
+  transform: scaleX(1.1);
   text-align: left;
   transition: transform 0.3s ease;
+  z-index: 10;
 }
 
 .intro_layout4 {
   position: absolute;
   top: 335vh;
-  left: 15vw;
-  width: 100vw;
+  right: 5vw;
+  left: auto;
+  width: 40vw;
   height: auto;
   font-family: "Courier New", monospace;
-  font-size: 3.1vw;
-  transform: scaleX(1.2);
-  text-align: left;
+  font-size: clamp(1.2rem, 2.5vw, 3rem);
+  transform: scaleX(1.1);
+  text-align: right;
   transition: transform 0.3s ease;
+  z-index: 10;
 }
 
 #IntroText:hover {
@@ -150,7 +155,7 @@
   height: auto;
   position: fixed;
   transition: transform 0.8s ease;
-  z-index: 4;
+  z-index: 100;
 }
 
 .img:hover {
@@ -173,8 +178,8 @@
   gap: 20vw;
   padding: 0;
   margin: 4vh;
-  opacity: 0.7;
-  z-index: 4;
+  opacity: 0.9;
+  z-index: 100;
 }
 
 .subpage {
@@ -182,8 +187,8 @@
 }
 
 .subpage:hover {
-  text-shadow: 0 0 5px rgba(252, 252, 252, 0.8),
-    0 0 10px rgba(189, 189, 177, 0.923), 0 0 30px rgba(99, 98, 96, 0.227);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(200, 200, 200, 0.6), 0 0 30px rgba(150, 150, 150, 0.4);
   transform: translateY(-10px);
 }
 
@@ -194,7 +199,7 @@
   left: 0;
   right: 0;
   height: 1.5px;
-  background-color: rgb(232, 238, 230);
+  background-color: rgb(255, 255, 255);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
@@ -240,15 +245,314 @@
 .Top {
   background: linear-gradient(
     to left,
-    rgba(113, 118, 121,0.8) 0%,
-    rgba(113, 118, 121, 0.7) 50%,
-    rgba(113, 118, 121, 0.6) 90%,
-    rgba(113, 118, 121, 0.2) 100%
+    rgba(73, 80, 87, 0.6) 0%,
+    rgba(66, 72, 80, 0.7) 30%,
+    rgba(59, 66, 72, 0.8) 70%,
+    rgba(73, 80, 87, 0.5) 100%
   );
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
   height: 12vh;
-  z-index: 4;
+  z-index: 50;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 1200px) {
+  .intro_layout1,
+  .intro_layout3 {
+    left: 40vw;
+  }
+  
+  .intro_layout2,
+  .intro_layout4 {
+    left: 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro_layout1,
+  .intro_layout3 {
+    left: 5vw;
+    width: 90vw;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+  }
+  
+  .intro_layout2,
+  .intro_layout4 {
+    right: 5vw;
+    left: auto;
+    width: 90vw;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+  }
+  
+  .NavBar {
+    left: 5vw;
+    gap: 10vw;
+    font-size: clamp(8px, 0.8vw, 80px);
+  }
+  
+  .img {
+    width: 8vw;
+  }
+  
+  #Guide {
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .intro_layout1,
+  .intro_layout2,
+  .intro_layout3,
+  .intro_layout4 {
+    left: 2vw;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    transform: scaleX(1);
+  }
+  
+  .NavBar {
+    left: 2vw;
+    gap: 5vw;
+    font-size: clamp(6px, 0.6vw, 60px);
+    margin: 2vh;
+  }
+  
+  .img {
+    width: 10vw;
+  }
+  
+  #Guide {
+    font-size: clamp(0.6rem, 1vw, 1.2rem);
+    width: 15vw;
+  }
+  
+  .Additional_info1,
+  .Additional_info2 {
+    font-size: 1.5vh;
+    left: 5vw;
+    right: 5vw;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .intro_layout1 {
+    top: 25vh;
+  }
+  
+  .intro_layout2 {
+    top: 125vh;
+  }
+  
+  .intro_layout3 {
+    top: 225vh;
+  }
+  
+  .intro_layout4 {
+    top: 325vh;
+  }
+  
+  .Top {
+    height: 8vh;
+  }
+  
+  .NavBar {
+    margin: 2vh;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .introBackground1,
+  .introBackground2 {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* New Home Page Layout Styles */
+.home-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1em;
+}
+
+.hero-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: #4a90e2;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #e0e0e0;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Navigation Cards */
+.navigation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4a90e2, #50c878);
+}
+
+.nav-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-card-content {
+  text-align: center;
+  color: #fff;
+}
+
+.nav-card h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #4a90e2;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #4a90e2, #50c878);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Card specific colors */
+.projects-card:hover::before {
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+}
+
+.experience-card:hover::before {
+  background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+}
+
+.future-card:hover::before {
+  background: linear-gradient(90deg, #45b7d1, #96ceb4);
+}
+
+/* Responsive Design for new layout */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .navigation-cards {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  .nav-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  
+  .hero-description {
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
 }

@@ -34,9 +34,9 @@ const Bottom = () => {
         <div className="Additional_info2" style={{right: width<height ? "0px":undefined,
                                                 left: width<height ? "10vw":undefined,
                                                 top: width<height ? "17vh":undefined}}>
-        Wherer am I currently: <br/>
+        Location: <br/>
         Country: Canada <br/>
-        Location: University of Waterloo, 200 Universit Ave W, N2J, 4B6
+        Address: 86 University Ave, West, Waterloo, ON N2L 3C8
         </div>
        </div>;
 };
