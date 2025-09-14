@@ -112,9 +112,39 @@ const LongTerm = () => {
                     ]}
                     category="game"
                     status="completed"
-                    videoUrl={gravitiventureVideo}
+                    videoUrl="No Video Available"
                     placeholderIcon="📸"
                     placeholderText="No Images Available"
+                />
+
+                 {/*Home Temperature Central Control (FPGA, VHDL, Intel Quartus, DE10-Lite)*/}
+                 <ProjectCard
+                    title="Home Temperature Central Control"
+                    description="Designed and implemented control logic for a simplified home HVAC system using VHDL on FPGA."
+                    technologies={['FPGA', 'VHDL', 'Intel Quartus', 'DE10-Lite']}
+                    features={[
+                        'Developed an FPGA-based control system for a centralized home HVAC model, integrating sensor-driven inputs with actuator outputs for automated environmental regulation.',
+                        'Executed end-to-end design flow including VHDL coding, simulation, synthesis, and on-board implementation, achieving reliable and efficient system performance.',
+                    ]}
+                    category="hardware"
+                    status="completed"
+                    placeholderIcon="📚"
+                    placeholderText="Website Screenshots & Live Demo"
+                />
+
+                {/*Traffic Light Control System*/}
+                <ProjectCard
+                    title="Traffic Light Control System"
+                    description="Implemented a finite state machine in VHDL to control traffic light timing and behavior at a crossroad."
+                    technologies={['FPGA', 'VHDL', 'Intel Quartus', 'DE10-Lite']}
+                    features={[
+                        'Engineered a finite state machine in VHDL to orchestrate multi-phase traffic light operations at an intersection, ensuring precise state transitions and timing synchronization.',
+                        'Conducted functional verification through simulation and deployed the design on DE10-Lite FPGA hardware for real-time validation',
+                    ]}
+                    category="hardware"
+                    status="completed"
+                    placeholderIcon="📚"
+                    placeholderText="Website Screenshots & Live Demo"
                 />
             </div>
         </div>
